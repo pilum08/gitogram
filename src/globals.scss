@@ -1,0 +1,66 @@
+body,
+html {
+    height: 100%;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #262626;
+    font-size: 14px;
+    line-height: 1.8;
+    font-family: 'Inter', sans-serif;
+}
+
+
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+p {
+    margin: 0;
+}
+
+svg {
+    display: block;
+}
+@for $i from 1 through 6 {
+    h#{$i} {
+        margin: 0;
+    }
+}
+
+button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    overflow: hidden;
+    min-height: 100%;
+    position: relative;
+}
+.x-container {
+    width: 1200px;
+    margin: 0 auto;
+}
+.main__container {
+    max-width: 980px;
+    margin: 0 auto;
+  }

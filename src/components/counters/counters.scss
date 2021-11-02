@@ -1,0 +1,39 @@
+.counters {
+    display: flex;
+    margin-top: 32px;
+      
+}
+.counters__btn {
+    border: none;
+    cursor: pointer;
+    background: #FAFBFC;
+    padding: 5px 12px;
+    border-right: 1px solid rgba(27, 31, 35, .1);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px; 
+}
+ .counters__value {
+    display: inline-block;
+    padding: 0 12px;
+    font-size: 14px;
+    line-height: 18px;
+ }
+ .counter {
+     display: flex;
+     align-items: center;
+ }
+
+ .star, .fork {
+    border: 1px solid rgba(27, 31, 35, .1);
+}
+.star,
+.star .actions__btn {
+    border-radius: 6px 0 0 6px;
+}
+
+.fork,
+.fork .actions__info {
+    border-radius: 0 6px 6px 0;
+}

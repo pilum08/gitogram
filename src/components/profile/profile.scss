@@ -1,0 +1,12 @@
+.profile {
+    display: flex;
+    height: 44px;
+    align-items: center;
+    
+    &__name {
+        align-items: center;
+        font-size: 18px;
+        font-weight: 700;
+        margin-left: 14px;
+    }
+}

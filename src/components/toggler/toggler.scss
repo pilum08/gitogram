@@ -1,0 +1,18 @@
+.toggler {
+    display: inline-flex;
+    align-items: center;
+    padding: 0;
+    &__icon{
+        width: 10px;
+        transform: rotate(180deg);
+    }
+    
+    &__text {
+        margin-right: 5px;
+    }
+}
+.active {
+    .toggler__icon {
+        transform: rotate(0deg);
+    }
+}
