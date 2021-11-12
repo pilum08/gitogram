@@ -1,23 +1,23 @@
 <template>
 <div class="post">
-    <profile name="Josh" />
+    <profile :profile_name="username" :src="avatar" />
     <slot> <div class="post__content">
-        <h3 class="post__title">Vue.js</h3>
-        <p class="post__text">JavaScript framework for building interactive web applications ⚡</p>
-        <counters stars="455" forks="125k" />
+        <h3 class="post__title">{{post_title}}</h3>
+        <p class="post__text">{{post_text}}</p>
+        <counters :stars="stars" :forks="forks"/>
     </div>
     </slot>
 <div class="issues">
     <toggler @onToggle="toggle" />
     <div class="comments" v-if="shown">
         <ul class="comments__list">
-            <li class="comment__item" v-for="n in 5" :key="n">
-                <comments text="Enable performance measuring..." username="John"/>
+            <li class="comment__item" v-for="comment in comments" :key="comment.issues_url">
+                <comments />
             </li>
         </ul>
     </div>
 </div>
-<span class="post__date">{{postDate}}</span>
+<span class="post__date">{{this.date}}</span>
 </div>
 
 </template>
@@ -34,10 +34,51 @@ export default {
     comments
   },
   props: [
+    'post_title',
+    'post_date',
+    'username',
+    'post_text',
     'stars',
     'forks',
-    'postDate'
+    'post_comment',
+    'avatar',
+    'comments'
+
   ],
+  computed: {
+    buttons () {
+      return [
+        {
+          type: 'star',
+          label: 'Star',
+          value: this.stars
+        },
+        {
+          type: 'fork',
+          label: 'Fork',
+          value: this.forks
+        }
+      ]
+    },
+    date () {
+      const months = [
+        'JAN',
+        'FEB',
+        'MAR',
+        'APR',
+        'MAY',
+        'JUN',
+        'JUL',
+        'AUG',
+        'SEP',
+        'OCT',
+        'NOV',
+        'DEC'
+      ]
+      const getPostDate = new Date(this.post_date)
+      return [getPostDate.getDate(), months[getPostDate.getMonth()]].join(' ')
+    }
+  },
   data () {
     return {
       shown: false

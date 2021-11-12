@@ -1,0 +1,33 @@
+.slide {
+    max-width: 375px;
+    background: #FFFFFF;
+    border-radius: 6px;
+  }
+  .slide__header {
+    padding: 8px;
+    border-bottom: 1px solid #CACACA;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .slide__content {
+    padding: 20px 18px;
+    max-height: 500px;
+    overflow-y: scroll;
+    font-size: 14px;
+    color: #404040;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.051) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      margin-bottom: 24px;
+    }
+    p {
+      margin-bottom: 14px;
+    }
+  }
+  .slide__footer {
+    padding: 24px 54px 32px 54px;
+    border-top: 1px solid #CACACA;
+  }

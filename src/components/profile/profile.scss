@@ -9,4 +9,15 @@
         font-weight: 700;
         margin-left: 14px;
     }
+    &__img {
+        margin-right: 12px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    
+    }
+    &__pic {
+        object-fit: cover;
+    }
 }

@@ -1,23 +1,17 @@
 <template>
     <div class="comment">
         <p>
-            <span class="comment__username">{{username}}</span>
-            {{text}}
+            <span class="comment__username">{{comment_author}}</span>
+            {{comment_text}}
         </p>
     </div>
 </template>
 <script>
 export default {
-  props: {
-    username: {
-      type: String,
-      required: true
-    },
-    text: {
-      type: String,
-      required: true
-    }
-  }
+  props: [
+    'comment_author',
+    'comment_text'
+  ]
 }
 </script>
 

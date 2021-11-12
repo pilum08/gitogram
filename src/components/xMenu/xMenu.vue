@@ -7,7 +7,7 @@
       </li>
       <li class="menu__item">
         <button class="menu__button menu__button--user">
-          <img src="../../assets/Photo.png" alt="">
+          <img src="https://picsum.photos/100" alt="">
         </button>
       </li>
       <li class="menu__item">

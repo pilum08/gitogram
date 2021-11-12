@@ -3,4 +3,14 @@
     align-items: center;
     width: 145px;
     justify-content: space-between;
+    &__item{
+       
+        img{
+            object-fit: cover;
+            width: 37px;
+            height: 37px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+    }
 }
