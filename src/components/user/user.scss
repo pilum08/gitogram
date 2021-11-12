@@ -1,0 +1,15 @@
+.user {
+    display: flex;
+    align-items: center;
+    
+}
+.user__img {
+    margin-right: 12px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+.user__name {
+    font-weight: 700;
+    font-size: 14px;
+}
